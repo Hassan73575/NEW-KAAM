@@ -7,7 +7,6 @@
 }
 /* navbar start */
 body {
-    background-color: #f4f4f9;
     color: #333;
     padding-top: 70px;
 }
@@ -95,6 +94,22 @@ body {
     border-radius: 15px;
     border: 1px solid;
 }
+#sort{
+    width: 120px;
+    height: 30px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #1e1e2f;
+    color: white;
+}
+.h1{
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    font-size: 40px;
+}
 .card-sec {
     display: flex;
     justify-content: center;
@@ -178,7 +193,28 @@ body {
     color: #ff6f61;
     transform: scale(1.05);
 }
-
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+.four-btn{
+    width: 80px;
+    padding: 10px;
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.four-btn:hover{
+    color: #ff6f61;
+    background: transparent;
+    border: 2px solid #ff6f61;
+    transform: translateY(-10px);
+}
 
 
 
