@@ -103,8 +103,8 @@ body {
 
 .img1 {
     border-radius: 15px;
-    width: 400px;
-    height: 300px;
+    width: 500px;
+    height: 400px;
     margin-top: 0;
     object-fit: cover;
     transition: transform 0.3s ease;
@@ -122,13 +122,13 @@ body {
 }
 
 .text h1 {
-    font-size: 2.5rem;
-    color: #333;
+    font-size: 50px;
+    color: black;
     margin-bottom: 20px;
 }
 
 .text p {
-    font-size: 1.2rem;
+    font-size: 15px;
     color: #666;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -741,12 +741,4 @@ h3 {
     }
 }
 
-@media (hover: none) {
-    .btn:hover, .butt:hover, .cards:hover, .age:hover {
-        transform: none;
-    }
-    
-    .btn:active, .butt:active, .cards:active, .age:active {
-        transform: scale(0.98);
-    }
-}
+
