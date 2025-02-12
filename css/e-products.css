@@ -5,11 +5,11 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
+/* navbar start */
 body {
     color: #333;
     padding-top: 70px;
 }
-/* navbar start */
 
 .nav {
     display: flex;
@@ -55,6 +55,10 @@ body {
     transition: all 0.5s ease;
     color: white;
 }
+#active{
+    background-color: #ff6f61;
+    color: white;
+}
 
 .links ul li a:hover {
     background-color: #ff6f61;
@@ -84,7 +88,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 25px 40px;
-    background-color: #ff6f61;
+    background: linear-gradient(45deg, #ff6f61, #ff9a8b);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -230,6 +234,7 @@ body {
 .cards h1 {
     font-size: 18px;
     margin: 10px 0;
+    font-weight: bold;
     color: #333;
 }
 
@@ -345,5 +350,259 @@ body {
     #sort {
         min-width: 120px;
         padding: 8px 15px;
+    }
+}
+
+/* Add these updated media queries at the end of the file */
+@media screen and (max-width: 1200px) {
+    .card-sec, .card-sec2 {
+        flex-wrap: wrap;
+        padding: 30px 20px;
+    }
+    
+    .cards {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .t-s-fil {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search {
+        max-width: 100%;
+        margin: 15px 0;
+    }
+
+    .cname {
+        width: 100%;
+        text-align: center;
+    }
+
+    .filter {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .buttons {
+        padding: 0 15px;
+        gap: 15px;
+    }
+
+    .butt {
+        width: calc(33.33% - 20px);
+        min-width: 140px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 140px;
+    }
+
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .logo {
+        border-right: none;
+        border-bottom: 2px solid #ff6f61;
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
+
+    .icons {
+        border-left: none;
+        border-top: 2px solid #ff6f61;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+    .links ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .card-sec, .card-sec2 {
+        padding: 20px 15px;
+    }
+
+    .h1 {
+        font-size: 28px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .t-s-fil {
+        padding: 15px;
+    }
+
+    .cname p {
+        font-size: 22px;
+    }
+
+    #input {
+        padding: 10px 40px 10px 15px;
+        font-size: 14px;
+    }
+
+    #sort {
+        min-width: 110px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .butt {
+        width: calc(50% - 15px);
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .buy-now {
+        width: 90%;
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+
+    .four-btn {
+        width: 60px;
+        padding: 8px;
+    }
+}
+
+/* Add this for better touch interactions on mobile */
+@media (hover: none) {
+    .cards:hover {
+        transform: none;
+    }
+    
+    .cards:active {
+        transform: translateY(-10px);
+    }
+
+    .buy-now:hover {
+        transform: none;
+    }
+
+    .buy-now:active {
+        background: transparent;
+        color: #ff6f61;
+    }
+}
+
+/* Add these navbar specific media queries */
+@media screen and (max-width: 992px) {
+    .nav {
+        padding: 0 20px;
+    }
+
+    .links ul {
+        gap: 10px;
+    }
+
+    .links ul li a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 160px;
+    }
+
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo {
+        border-right: none;
+        border-bottom: 2px solid #ff6f61;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .links {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .links ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .icons {
+        border-left: none;
+        border-top: 2px solid #ff6f61;
+        padding-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        padding: 8px;
+    }
+
+    .logo p {
+        font-size: 20px;
+    }
+
+    .links ul li a {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    .icons {
+        gap: 15px;
+    }
+
+    .icons i {
+        font-size: 16px;
+    }
+}
+
+/* Add touch device optimizations */
+@media (hover: none) {
+    .links ul li a:hover {
+        background-color: transparent;
+    }
+
+    .links ul li a:active {
+        background-color: #ff6f61;
+        color: white;
+    }
+
+    .icons i:hover {
+        transform: none;
+    }
+
+    .icons i:active {
+        color: #ff6f61;
+        transform: scale(0.95);
     }
 }

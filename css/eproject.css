@@ -61,6 +61,10 @@ body {
     background-color: #ff6f61;
     color: white;
 }
+#active{
+    background-color: #ff6f61;
+    color: white;
+}
 
 .icons {
     display: flex;
@@ -103,8 +107,8 @@ body {
 
 .img1 {
     border-radius: 15px;
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     margin-top: 0;
     object-fit: cover;
     transition: transform 0.3s ease;
@@ -122,13 +126,13 @@ body {
 }
 
 .text h1 {
-    font-size: 50px;
-    color: black;
+    font-size: 2.5rem;
+    color: #333;
     margin-bottom: 20px;
 }
 
 .text p {
-    font-size: 15px;
+    font-size: 1.2rem;
     color: #666;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -350,6 +354,7 @@ h3 {
 .cards h1 {
     font-size: 18px;
     margin: 10px 0;
+    font-weight: bold;
     color: #333;
 }
 
@@ -370,20 +375,25 @@ h3 {
     margin: 20px 0 40px 0;
 }
 
-.btn-all {
+.btn-all{
     padding: 12px 30px;
     background-color: #ff6f61;
     color: white;
     border: 2px solid #ff6f61;
     border-radius: 25px;
     font-size: 16px;
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: bold;
 }
-
+.btn-all a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
 .btn-all:hover {
     background-color: transparent;
     color: #ff6f61;
@@ -558,187 +568,31 @@ h3 {
     color: white;
 }
 
-@media (max-width: 1200px) {
-    .card-sec, .card-sec2 {
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-    
-    .cards {
-        width: calc(50% - 30px);
-    }
-
-    .img-text {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 20px;
-    }
-
-    .img1 {
-        width: 100%;
-        max-width: 400px;
-    }
-}
-
 @media (max-width: 768px) {
     body {
-        padding-top: 120px;
+        padding-top: 200px;
     }
 
     .nav {
         flex-direction: column;
         height: auto;
-        padding: 15px;
-    }
-
-    .logo {
-        border-right: none;
-        border-bottom: 2px solid #ff6f61;
-        padding: 10px 0;
-        margin-bottom: 10px;
-    }
-
-    .links ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .icons {
-        border-left: none;
-        border-top: 2px solid #ff6f61;
-        padding-top: 10px;
-        margin-top: 10px;
-    }
-
-    .pic {
-        margin-top: -70px;
-        padding: 50px 0;
-    }
-
-    .text h1 {
-        font-size: 2rem;
-    }
-
-    .text p {
-        font-size: 1rem;
-    }
-
-    .sales {
-        flex-direction: column;
-        margin: 30px 0;
-    }
-
-    .rating {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 20px 0;
-    }
-
-    .ages {
-        padding: 10px;
-    }
-
-    .age {
-        width: calc(50% - 20px);
-        min-width: 250px;
-    }
-
-    .buttons {
-        gap: 10px;
-    }
-
-    .butt {
-        width: calc(50% - 20px);
-        min-width: 140px;
-    }
-
-    .img-text2 {
-        height: auto;
-        margin: 30px 20px;
-        padding: 30px;
-        font-size: 24px;
     }
 
     .cards {
-        width: 100%;
-        max-width: 400px;
+        width: 90%;
+        margin: 10px auto;
     }
 
-    .parents {
-        padding: 20px 10px;
-    }
-
-    .child {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav {
-        padding: 10px;
-    }
-
-    .logo p {
-        font-size: 20px;
-    }
-
-    .links ul li a {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-
-    .text h1 {
-        font-size: 1.5rem;
-    }
-
-    .btn {
-        padding: 12px 30px;
-        font-size: 16px;
+    .pic2 h3 {
+        font-size: 1.8rem;
     }
 
     .age {
-        width: 100%;
-    }
-
-    .awaits {
-        font-size: 20px;
-    }
-
-    .img-text2 {
-        font-size: 20px;
-        padding: 20px;
-    }
-
-    .img-text2 p {
-        font-size: 16px;
-    }
-
-    .email {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    .chi-img {
-        width: 120px;
-        height: 120px;
-        margin: -90px auto 20px auto;
+        width: 80%;
     }
 
     .child {
-        padding-top: 70px;
-    }
-
-    .child p {
-        font-size: 14px;
+        width: 90%;
+        margin: 30px auto;
     }
 }
-
-
