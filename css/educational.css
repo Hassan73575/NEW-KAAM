@@ -140,12 +140,6 @@ body {
     font-size: 18px;
     font-weight: 500;
 }
-.h1{
-    text-align: center;
-    margin-top: 15px;
-    font-size:40px ;
-
-}
 
 #sort {
     padding: 10px 20px;
@@ -155,6 +149,7 @@ body {
     background: #1e1e2f;
     color: white;
     cursor: pointer;
+    text-transform: capitalize;
     transition: all 0.3s ease;
     min-width: 140px;
 }
@@ -162,6 +157,12 @@ body {
 #sort:hover {
     background: white;
     color: #ff6f61;
+}
+.h1{
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 20px;
+    font-size: 40px;
 }
 .card-sec {
     display: flex;
@@ -206,7 +207,6 @@ body {
 .cards h1 {
     font-size: 18px;
     margin: 10px 0;
-    font-weight: bold;
     color: #333;
 }
 
@@ -220,9 +220,13 @@ body {
     color: #444;
     font-weight: bold;
 }
-#active{
+#nav-active{
     background-color: #ff6f61;
     color: white;
+}
+#nav-active:hover{
+    background-color: white;
+    color: #ff6f61;
 }
 .buttons {
     display: flex;
@@ -232,23 +236,42 @@ body {
     flex-wrap: wrap;
     padding: 0 20px;
 }
-
-.butt {
-    width: 150px;
-    height: 40px;
+#active{
     background-color: white;
+    color: #ff6f61;
+}
+#active:hover{
+    background-color: #ff6f61;
+    color: white;
+}
+.butt {
+    min-width: 140px;
+    padding: 12px 20px;
+    background-color: #ff6f61;
+    color: white;
     border: 2px solid #ff6f61;
-    border-radius: 50px;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
+    font-size: 15px;
+    border-radius: 20px;
     transition: all 0.3s ease;
 }
 
 .butt:hover {
-    background-color: #ff6f61;
-    color: white;
+    background-color: white;
+    color: #ff6f61;
+    border-color: #ff6f61;
     transform: scale(1.05);
 }
+
+.butt a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+}
+
 .buy-now {
     padding: 10px 20px;
     background: #ff6f61;
@@ -293,7 +316,7 @@ body {
 @media screen and (max-width: 1200px) {
     .card-sec, .card-sec2 {
         flex-wrap: wrap;
-        padding: 30px 20px;
+        padding: 30px 15px;
     }
     
     .cards {
@@ -309,18 +332,27 @@ body {
     }
 
     .search {
-        max-width: 100%;
-        margin: 15px 0;
+        width: 100%;
+        max-width: 600px;
+        margin: 10px 0;
     }
 
     .cname {
-        width: 100%;
         text-align: center;
     }
 
     .filter {
         width: 100%;
         justify-content: center;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .butt {
+        min-width: 130px;
+        padding: 10px 15px;
     }
 }
 
@@ -332,19 +364,32 @@ body {
     .nav {
         flex-direction: column;
         height: auto;
-        padding: 15px;
+        padding: 10px;
     }
 
     .logo {
         border-right: none;
         border-bottom: 2px solid #ff6f61;
         padding: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .links {
+        padding: 10px 0;
+    }
+
+    .links ul {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .icons {
         border-left: none;
         border-top: 2px solid #ff6f61;
         padding-top: 10px;
+        justify-content: center;
+        width: 100%;
     }
 
     .cards {
@@ -352,47 +397,40 @@ body {
         max-width: 400px;
     }
 
+    .h1 {
+        font-size: 28px;
+    }
+
     .footer-links {
         flex-direction: column;
-        text-align: center;
         gap: 30px;
+        text-align: center;
     }
 }
 
 @media screen and (max-width: 576px) {
+    #input, #sort {
+        font-size: 14px;
+    }
+
     .cname p {
         font-size: 22px;
     }
 
-    #input {
-        padding: 10px 40px 10px 15px;
+    .butt {
+        width: calc(50% - 10px);
+        min-width: unset;
         font-size: 14px;
-    }
-
-    .filter label {
-        font-size: 16px;
-    }
-
-    #sort {
-        padding: 8px 15px;
-        font-size: 14px;
-        min-width: 110px;
     }
 
     .buy-now {
         width: 90%;
-        padding: 8px 15px;
         font-size: 13px;
+    }
+
+    .cards h1 {
+        font-size: 16px;
     }
 }
 
-/* Add touch device optimizations */
-@media (hover: none) {
-    .cards:hover {
-        transform: none;
-    }
-    
-    .cards:active {
-        transform: translateY(-10px);
-    }
-}
+
