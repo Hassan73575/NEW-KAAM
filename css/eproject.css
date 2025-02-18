@@ -83,6 +83,16 @@ body {
     color: #ff6f61;
     transform: rotate(360deg);
 }
+
+.icons .fa-user {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icons .fa-user:hover {
+    color: #ff6f61;
+    transform: scale(1.1);
+}
 /* nav bar ens */
 
 .pic {
