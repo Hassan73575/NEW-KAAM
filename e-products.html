@@ -14,6 +14,11 @@
 <body>
     <!-- nav bar start  -->
     <div class="nav">
+        <div class="menu-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <div class="logo">
             <p>toyo toys</p>
         </div>
@@ -30,7 +35,7 @@
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-regular fa-heart"></i>
             <i class="fa-solid fa-cart-shopping"></i>
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user" onclick="window.location.href='login.html'"></i>
         </div>
     </div>
     <!-- nav bar end -->
@@ -63,8 +68,8 @@
     </div>
     <div class="card-sec">
         <div class="cards">
-            <img src="images/download (6).jpg" alt="" class="card-img">
-            <h1>Four adorable teddie</h1>
+            <img src="images/puzzels-3.jpg" alt="" class="card-img">
+            <h1>"Roll,Play,Win,repeat"</h1>
             <div class="ratings">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -78,9 +83,9 @@
             </button>
         </div>
         <div class="cards">
-            <img src="images/945be24f-a401-4b23-9fb9-ff5cc052ee31.__CR0,0,970,600_PT0_SX970_V1___.jpg" alt=""
+            <img src="images/babytoy-3.jpg" alt=""
                 class="card-img">
-            <h1>Grab your football set!</h1>
+            <h1>Adorable bunnies,endless fun</h1>
             <div class="ratings">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -94,8 +99,8 @@
             </button>
         </div>
         <div class="cards">
-            <img src="images/images (1).jpg" alt="" class="card-img">
-            <h1>Cricket set, don’t miss!</h1>
+            <img src="images/babytoy-6.jpg" alt="" class="card-img">
+            <h1>Tunes on tracks joy</h1>
             <div class="ratings">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -109,8 +114,8 @@
             </button>
         </div>
         <div class="cards">
-            <img src="images/istockphoto-184096624-612x612.jpg" alt="" class="card-img">
-            <h1>RC boat, ready to race!</h1>
+            <img src="images/babytoy-1.jpg" alt="" class="card-img">
+            <h1>Crawling steps,big adventure</h1>
             <div class="ratings">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -190,8 +195,8 @@
 
     <div class="card-sec2">
         <div class="cards">
-            <img src="images/A_01_3cc25a5a-6846-4420-8124-f364fbea8125.jpg" class="card-img">
-            <h1>"Soft baby teether, available!"</h1>
+            <img src="images/puzzels-1.jpg" class="card-img">
+            <h1>"Unlock the hidden piecses"</h1>
             <div class="ratings">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -205,8 +210,8 @@
             </button>
         </div>
         <div class="cards">
-            <img src="images/Jumbo_Bowling_Set3_800x.jpg" alt="" class="card-img">
-            <h1>"Bowling set, grab yours!"</h1>
+            <img src="images/puzzels-7.jpg" alt="" class="card-img">
+            <h1>"Pop,Play,relieve stress"</h1>
             <div class="ratings">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -220,8 +225,8 @@
             </button>
         </div>
         <div class="cards">
-            <img src="images/images (2).jpg" alt="" class="card-img">
-            <h1>Ready for next adventure</h1>
+            <img src="images/images-9.jpg" alt="" class="card-img">
+            <h1>Slide into endless fun</h1>
             <div class="ratings">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -236,7 +241,7 @@
         </div>
         <div class="cards">
             <img src="images/puzzel.jpeg" alt="" class="card-img">
-            <h1>"Fun puzzles available now!"</h1>
+            <h1>"Fun puzzles available now"</h1>
             <div class="ratings">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -294,6 +299,17 @@
                 <li><a href="">Threads</a></li>
             </ul>
         </div>
+    </div>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const links = document.querySelector('.links');
+        
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            links.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

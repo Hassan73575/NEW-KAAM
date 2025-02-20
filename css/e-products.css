@@ -332,10 +332,23 @@ body {
     .card-sec, .card-sec2 {
         flex-wrap: wrap;
         padding: 30px 15px;
+        gap: 30px;
     }
     
     .cards {
-        width: calc(50% - 20px);
+        width: calc(50% - 30px);
+        min-width: 280px;
+    }
+
+    .t-s-fil {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .search {
+        width: 100%;
+        max-width: 500px;
     }
 }
 
@@ -368,6 +381,45 @@ body {
     .butt {
         min-width: 130px;
         padding: 10px 15px;
+    }
+
+    .nav {
+        padding: 0 15px;
+    }
+
+    /* Add mobile menu button */
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-btn .bar {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+    .links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #1e1e2f;
+        padding: 20px;
+        transition: 0.3s;
+    }
+
+    .links.active {
+        right: 0;
+    }
+
+    .links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
     }
 }
 
@@ -421,6 +473,42 @@ body {
         gap: 30px;
         text-align: center;
     }
+
+    .h1 {
+        font-size: 24px;
+        padding: 0 20px;
+    }
+
+    .cards {
+        width: calc(100% - 40px);
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .butt {
+        width: 45%;
+        margin: 5px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .footer-links div {
+        width: 100%;
+    }
+
+    .four-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -452,4 +540,64 @@ body {
     .cards h1 {
         font-size: 16px;
     }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        padding: 10px;
+    }
+
+    .logo p {
+        font-size: 20px;
+    }
+
+    .icons {
+        gap: 15px;
+    }
+
+    .icons i {
+        font-size: 16px;
+    }
+
+    .search input {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .filter select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .butt {
+        width: 100%;
+        margin: 5px 20px;
+    }
+
+    .card-img {
+        height: 180px;
+    }
+
+    .cards h1 {
+        font-size: 16px;
+    }
+
+    .buy-now {
+        width: 100%;
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}
+
+/* Add animation for menu toggle */
+.menu-btn.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-btn.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }

@@ -1,12 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="e-contact.css">
+    <title>Contact Us - Toyo Toys</title>
+    <link rel="stylesheet" href="css/e-contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <!-- nav bar start  -->
+    <div class="nav">
+        <div class="logo">
+            <p>toyo toys</p>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="e-products.html">Products</a></li>
+                <li><a href="e-about.html">About</a></li>
+                <li><a href="e-contact.html" id="active">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-user" onclick="window.location.href='login.html'"></i>
+        </div>
+    </div>
+    <!-- nav bar end -->
+
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you!</p>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Our Location</h3>
+                <p>123 Toy Street, Fun City</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <h3>Phone Number</h3>
+                <p>+1 234 567 8900</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Address</h3>
+                <p>info@toyotoys.com</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Your Phone">
+                <select>
+                    <option value="" disabled selected>Select Topic</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Customer Support</option>
+                    <option value="business">Business Partnership</option>
+                </select>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=your-map-embed-code" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 </body>
 </html>

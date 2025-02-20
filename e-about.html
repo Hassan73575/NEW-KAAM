@@ -1,12 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="e-about.css">
+    <title>Contact - Toyo Toys</title>
+    <link rel="stylesheet" href="css/e-about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
-    
+    <div class="nav">
+        <div class="menu-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="logo">
+            <img src="images/logo.jpg.jpg" alt="" class="nav-img">
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="e-products.html">Products</a></li>
+                <li><a href="e-about.html" id="active">About</a></li>
+                <li><a href="e-contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-user" onclick="window.location.href='login.html'"></i>
+        </div>
+    </div>
+    <div class="text">
+        <h1>Meet the Team</h1>
+    </div>
+
+    <div class="first-card">
+        <div class="child">
+            <img src="images/Document from HASSAN ANJUM💻.jpg" alt="Card 1" class="chi-img">
+            <h1>HASSAN ANJUM</h1>
+            <h3>Group Leader</h3>
+            <p>The leader of a website, or the owner, is responsible for managing the website, setting its direction,
+                and ensuring its growth. They oversee the website's operations, focusing on content creation, marketing
+                strategies, and user experience. The role of a website leader is dynamic, requiring them to stay updated
+                on new trends, understand the needs of the audience, and create relevant and engaging content for them.
+            </p>
+        </div>
+    </div>
+    <div class="cards-container">
+        <div class="child">
+            <img src="images/Document from HASSAN ANJUM💻 (4).jpg" alt="Card 2" class="chi-img">
+            <h1>ABDULLAH ASIM</h1>
+            <h3>Group Member</h3>
+            <p>A toy website's team is responsible for creating an enjoyable and interactive online experience for
+                customers. The members work together to ensure that the website is visually appealing, user-friendly,
+                and easy to navigate. They are focused on curating a variety of toys that cater to different age groups
+                and interests, providing detailed product descriptions, images, and reviews to help customers make
+                informed purchasing decisions</p>
+
+        </div>
+        <div class="child">
+            <img src="images/Document from HASSAN ANJUM💻 (3).jpg" alt="Card 3" class="chi-img">
+            <h1>KASHAN MAJEED</h1>
+            <h3>Group Member</h3>
+            <p>In addition to product management, the team behind the toy website is committed to ensuring excellent
+                customer service. They manage customer inquiries, feedback, and reviews, addressing any issues quickly
+                and efficiently. Marketing and promotional efforts are also key, as the team develops campaigns that
+                attract new customers while keeping loyal ones engaged.</p>
+
+        </div>
+        <div class="child">
+            <img src="images/Document from HASSAN ANJUM💻 (1).jpg" alt="Card 4" class="chi-img">
+            <h1>FARUKH TAUSIEF</h1>
+            <h3>Group Member</h3>
+            <p>The group members also focus on ensuring the safety and quality of the toys being sold on the website.
+                They work closely with manufacturers and suppliers to ensure that the products meet safety standards and
+                are age-appropriate. The team also prioritizes fast and reliable shipping, offering secure payment
+                methods and a seamless checkout process.</p>
+
+        </div>
+        <div class="child">
+            <img src="images/Document from HASSAN ANJUM💻 (5).jpg" alt="Card 5" class="chi-img">
+            <h1>NAMEER RAZA</h1>
+            <h3>Group Member</h3>
+            <p>The team behind a toy website is dedicated to offering a diverse range of products that cater to children
+                of all ages. They carefully select toys that are not only fun and entertaining but also educational,
+                promoting creativity and development. The members of the team continuously research trends in the toy
+                industry to ensure they provide the most up-to-date and popular items.</p>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="simple-about">
+            <h1>About Toyo Toys</h1>
+            <p>Welcome to TOYO TOYS, your premier destination for innovative and educational toys! Since our establishment, we've been dedicated to creating extraordinary play experiences that combine learning with endless fun.</p>
+            
+            <div class="features">
+                <div class="feature-col">
+                    <h3>Our Products</h3>
+                    <ul>
+                        <li>Educational Building Blocks</li>
+                        <li>Interactive Learning Games</li>
+                        <li>STEM-focused Toys</li>
+                        <li>Creative Arts & Crafts</li>
+                    </ul>
+                </div>
+                <div class="feature-col">
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li>Quality Assurance</li>
+                        <li>Child Safety First</li>
+                        <li>Educational Focus</li>
+                        <li>Customer Satisfaction</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="#" class="social-btn instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const links = document.querySelector('.links');
+        
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            links.classList.toggle('active');
+        });
+    </script>
+        <div class="footer-links">
+            <div class="link1">
+                <h1>Global Links</h1>
+                <ul>
+                    <li><a href="">Browe Toys</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="">Gift</a></li>
+                </ul>
+            </div>
+            <div class="link2">
+                <h1>Products</h1>
+                <ul>
+                    <li><a href="">Outdoor play</a></li>
+                    <li><a href="">Educational toys</a></li>
+                    <li><a href="">Puzzels & games</a></li>
+                    <li><a href="">Dolls & taddies</a></li>
+                    <li><a href="">Baby toys</a></li>
+                </ul>
+            </div>
+            <div class="link3">
+                <h1>Ground Rules</h1>
+                <ul>
+                    <li><a href="">Term and condition</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Shipping & Delivery </a></li>
+                </ul>
+            </div>
+            <div class="link4">
+                <h1>Follow Us</h1>
+                <ul>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Youtube</a></li>
+                    <li><a href="">Threads</a></li>
+                </ul>
+            </div>
+        </div>
+
 </body>
+
 </html>
