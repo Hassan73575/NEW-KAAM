@@ -564,7 +564,10 @@ h3 {
     position: relative;
     padding: 20px 0;
 }
-
+.child h2{
+    font-size: 35px;
+    text-align: center;
+}
 .child p::before {
     content: '"';
     position: absolute;
