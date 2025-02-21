@@ -10,7 +10,25 @@ body {
     padding-top: 70px;
 }
 /* navbar start */
+.nav-img{
+    width: 80px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
 
+.menu-btn .bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
 .nav {
     display: flex;
     justify-content: space-between;
@@ -430,6 +448,264 @@ body {
     .cards h1 {
         font-size: 16px;
     }
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-btn .bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Main Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .card-sec, .card-sec2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .cards {
+        width: calc(50% - 30px);
+        min-width: 280px;
+    }
+
+    .t-s-fil {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .search {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #1e1e2f;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .links.active {
+        right: 0;
+    }
+
+    .links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .links ul li a {
+        font-size: 18px;
+        padding: 15px 30px;
+        width: 200px;
+        text-align: center;
+        display: block;
+    }
+
+    .rating {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .buttons {
+        gap: 15px;
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 90px;
+    }
+
+    .nav {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        border: none;
+    }
+
+    .icons {
+        border: none;
+        gap: 15px;
+    }
+
+    .text h1 {
+        font-size: 32px;
+    }
+
+    .text p {
+        font-size: 1rem;
+    }
+
+    .cards {
+        width: 90%;
+        margin: 10px;
+    }
+
+    .img-text2 {
+        height: auto;
+        margin: 30px 15px;
+        padding: 30px 15px;
+    }
+
+    .img-text2 h1 {
+        font-size: 24px;
+    }
+
+    .parents {
+        padding: 60px 15px;
+    }
+
+    .child {
+        width: 100%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .footer-links div {
+        margin-bottom: 25px;
+    }
+
+    .sub-news {
+        padding: 20px;
+    }
+
+    .web-img {
+        width: 200px;
+    }
+
+    .email {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        padding: 10px;
+    }
+
+    .logo p {
+        font-size: 18px;
+    }
+
+    .icons i {
+        font-size: 16px;
+    }
+
+    .text h1 {
+        font-size: 26px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .age {
+        width: 100%;
+    }
+
+    .cards {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .card-img {
+        height: 180px;
+    }
+
+    .cards h1 {
+        font-size: 16px;
+    }
+
+    .buy-now {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .child {
+        padding: 15px;
+        padding-top: 60px;
+    }
+
+    .chi-img {
+        width: 100px;
+        height: 100px;
+        margin: -70px auto 15px;
+        border-width: 5px;
+    }
+
+    .child p {
+        font-size: 14px;
+    }
+
+    .footer-links h1 {
+        font-size: 18px;
+    }
+
+    .footer-links li a {
+        font-size: 14px;
+    }
+}
+
+/* Animation for menu toggle */
+.menu-btn.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-btn.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.links.active {
+    animation: slideIn 0.3s forwards;
 }
 
 

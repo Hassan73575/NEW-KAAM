@@ -10,7 +10,25 @@ body {
     padding-top: 70px;
 }
 /* navbar start */
+.nav-img{
+    width: 80px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
 
+.menu-btn .bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
 .nav {
     display: flex;
     justify-content: space-between;

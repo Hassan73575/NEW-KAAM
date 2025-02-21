@@ -1,7 +1,13 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+.nav-img{
+    width: 80px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 15px;
 }
 .nav {
     display: flex;
@@ -17,20 +23,6 @@
     z-index: 1;
     padding: 0 30px;
 }
-
-.logo {
-    border-right: 2px solid #ff6f61;
-    padding-right: 20px;
-}
-
-.logo p {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-    color: #ff6f61;
-}
-
 .links ul {
     display: flex;
     gap: 20px;
@@ -76,11 +68,7 @@
 }
 .contact-header {
     text-align: center;
-    width: 100%;
-    height: 350px;
-    padding-top: 130px;
-    font-size: 25px;
-    font-weight: bold;
+    padding: 120px;
     background: linear-gradient(135deg, #ff6b6b, #ff8e53);
     color: white;
     animation: fadeIn 1s ease-in;
@@ -175,6 +163,20 @@
     margin: 50px 0;
     padding: 0 20px;
 }
+.footer-links{
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    background-color: #ff6f61;
+}
+.footer-links ul {
+    list-style-type: none;
+    padding-top: 10px;
+}
+.footer-links li a {
+    text-decoration: none;
+    color: white;
+}
 
 @keyframes fadeIn {
     from {
@@ -218,4 +220,266 @@
     .contact-form textarea {
         padding: 12px;
     }
+}
+
+/* Add responsive styles for navbar and footer */
+@media screen and (max-width: 992px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #1e1e2f;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .links.active {
+        left: 0;
+    }
+
+    .links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .links ul li a {
+        font-size: 18px;
+        padding: 15px 30px;
+        width: 200px;
+        text-align: center;
+        display: block;
+    }
+
+    .icons {
+        border-left: none;
+        padding-left: 0;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .menu-btn.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-btn.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-btn.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .footer-links div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 90px;
+    }
+
+    .nav {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        border: none;
+    }
+
+    .icons {
+        border: none;
+        gap: 15px;
+    }
+
+    .contact-header h1 {
+        font-size: 2em;
+    }
+
+    .info-item {
+        min-width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        padding: 12px;
+    }
+
+    .footer-links h1 {
+        font-size: 18px;
+    }
+
+    .footer-links li a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        padding: 10px;
+    }
+
+    .logo p {
+        font-size: 18px;
+    }
+
+    .icons i {
+        font-size: 16px;
+    }
+
+    .contact-header h1 {
+        font-size: 1.5em;
+    }
+
+    .info-item {
+        min-width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        padding: 10px;
+    }
+
+    .footer-links h1 {
+        font-size: 16px;
+    }
+
+    .footer-links li a {
+        font-size: 12px;
+    }
+}
+
+/* Animation for menu toggle */
+.menu-btn.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-btn.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.links.active {
+    animation: slideIn 0.3s forwards;
+}
+
+/* Add these styles for the menu button */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-btn .bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Add responsive navbar styles */
+@media screen and (max-width: 992px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #1e1e2f;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .links.active {
+        left: 0;
+    }
+
+    .links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .links ul li a {
+        font-size: 18px;
+        padding: 15px 30px;
+        width: 200px;
+        text-align: center;
+        display: block;
+    }
+
+    .icons {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    /* Menu button animation */
+    .menu-btn.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-btn.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-btn.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* Add slide animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.links.active {
+    animation: slideIn 0.3s forwards;
 }

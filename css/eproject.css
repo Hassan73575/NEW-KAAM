@@ -11,6 +11,12 @@ body {
     color: #333;
     padding-top: 70px;
 }
+.nav-img{
+    width: 80px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 15px;
+}
 /* navbar start */
 .nav {
     display: flex;
@@ -26,20 +32,6 @@ body {
     z-index: 1;
     padding: 0 30px;
 }
-
-.logo {
-    border-right: 2px solid #ff6f61;
-    padding-right: 20px;
-}
-
-.logo p {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-    color: #ff6f61;
-}
-
 .links ul {
     display: flex;
     gap: 20px;
@@ -675,10 +667,6 @@ h3 {
         margin: 30px auto;
     }
 }
-
-/* Add these responsive styles at the end of the file */
-
-/* Add mobile menu button */
 .menu-btn {
     display: none;
     cursor: pointer;
@@ -868,4 +856,19 @@ h3 {
 
 .menu-btn.active .bar:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.links.active {
+    animation: slideIn 0.3s forwards;
 }

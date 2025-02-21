@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +10,22 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!-- nav bar start  -->
-    <div class="nav">
+     <!-- nav bar start  -->
+     <div class="nav">
+        <div class="menu-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <div class="logo">
-            <p>toyo toys</p>
+            <img src="images/logo.jpg.jpg" alt="" class="nav-img">
         </div>
         <div class="links">
             <ul>
-                <li><a href="index.html">Home</a></li>
                 <li><a href="e-products.html">Products</a></li>
                 <li><a href="e-about.html">About</a></li>
-                <li><a href="e-contact.html" id="active">Contact</a></li>
+                <li><a href="e-contact.html">Contact</a></li>
+                <li><a href="index.html" id="active">Home</a></li>
             </ul>
         </div>
 
@@ -33,7 +37,6 @@
         </div>
     </div>
     <!-- nav bar end -->
-
     <div class="contact-header">
         <h1>Contact Us</h1>
         <p>We'd love to hear from you!</p>
@@ -78,5 +81,51 @@
     <div class="map-container">
         <iframe src="https://www.google.com/maps/embed?pb=your-map-embed-code" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
+    <div class="footer-links">
+        <div class="link1">
+            <h1>Global Links</h1>
+            <ul>
+                <li><a href="">Browe Toys</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Gift</a></li>
+            </ul>
+        </div>
+        <div class="link2">
+            <h1>Products</h1>
+            <ul>
+                <li><a href="">Outdoor play</a></li>
+                <li><a href="">Educational toys</a></li>
+                <li><a href="">Puzzels & games</a></li>
+                <li><a href="">Dolls & taddies</a></li>
+                <li><a href="">Baby toys</a></li>
+            </ul>
+        </div>
+        <div class="link3">
+            <h1>Ground Rules</h1>
+            <ul>
+                <li><a href="">Term and condition</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Shipping & Delivery </a></li>
+            </ul>
+        </div>
+        <div class="link4">
+            <h1>Follow Us</h1>
+            <ul>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Youtube</a></li>
+                <li><a href="">Threads</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const links = document.querySelector('.links');
+        
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            links.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
