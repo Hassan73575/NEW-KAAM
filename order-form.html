@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details | Toyo Toys</title>
+    <link rel="stylesheet" href="css/order-form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="order-container">
+        <div class="order-form">
+            <div class="back-nav">
+                <a href="javascript:history.back()" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Go Back
+                </a>
+            </div>
+            
+            <h1>Order Details</h1>
+            <form id="orderForm" action="confirmation.html">
+                <div class="form-group">
+                    <h2>Personal Information</h2>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+
+                <div class="form-group">
+                    <h2>Shipping Address</h2>
+                    <input type="text" placeholder="Street Address" required>
+                    <input type="text" placeholder="City" required>
+                    <input type="text" placeholder="Postal Code" required>
+                    <select required>
+                        <option value="" disabled selected>Select Province</option>
+                        <option value="sindh">Sindh</option>
+                        <option value="punjab">Punjab</option>
+                        <option value="kpk">KPK</option>
+                        <option value="balochistan">Balochistan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h2>Payment Method</h2>
+                    <div class="payment-options">
+                        <label>
+                            <input type="radio" name="payment" value="cod" checked>
+                            Cash on Delivery
+                        </label>
+                        <label>
+                            <input type="radio" name="payment" value="card">
+                            Credit/Debit Card
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="confirm-btn">
+                    Confirm Order <i class="fas fa-check"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
