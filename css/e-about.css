@@ -1,21 +1,22 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
-
 body {
-    background-color: #ff6e61a2;
     padding-top: 70px;
+    background: linear-gradient(90deg,#e65c54,gold,#e65c54);
 }
 .text{
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    font-size: 25px;
-    letter-spacing: 2px;
+    font-size: 45px;
+    font-weight: bolder;
     text-transform: capitalize;
+    
 }
 .nav-img{
     width: 80px;
@@ -69,7 +70,7 @@ body {
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
     color: white;
 }
 
@@ -89,7 +90,6 @@ body {
     text-decoration: none;
     letter-spacing: 3px;
     font-size: 20px;
-    transition: 0.3s ease;
 }
 
 .icons {
@@ -102,12 +102,11 @@ body {
 .icons i {
     font-size: 18px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
 
 .icons i:hover {
-    color: #ff6f61;
-    transform: rotate(360deg);
+    /* color: #ff6f61; */
 }
 .first-card{
     display: flex;
@@ -124,8 +123,8 @@ body {
 }
 .child {
     width: 350px;
-    background: white;
-    border: 2px solid #ff6f61;
+    background-color: lavenderblush;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     text-align: start;
     padding: 25px;
@@ -136,7 +135,8 @@ body {
 }
 
 .child:hover {
-    transform: translateY(-30px);
+    /* background: rgba(255, 255, 255, 0.2); */
+    transform: scaleX(1.05);
     box-shadow: 0 15px 30px rgba(255, 111, 97, 0.2);
 }
 .chi-img {
@@ -161,8 +161,6 @@ body {
     font-size: 1.1em;
     margin-bottom: 15px;
 }
-
-
 .cards-container .card img {
     width: 200px;
     height: 200px;
@@ -190,103 +188,10 @@ body {
     color: #ff6f61;
     font-size: 1.1rem;
 }
-
-.card p {
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.card button {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.card button:hover {
-    background: #45a049;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(255, 111, 97, 0.2);
-    border-color: #4CAF50;
-    background: linear-gradient(150deg, #f0f0ff 0%, #add8e6 100%); 
-    background-size: 200% 200%;
-    transition: all 0.4s ease;
-}
-
-.card:hover img {
-    transform: none;
-}
-
-.card:nth-child(1):hover {
-    box-shadow: 0 0 30px rgba(76, 175, 80, 0.5);
-    background: linear-gradient(150deg, #f0fff0 0%, #90ee90 100%);
-    background-size: 200% 200%;
-}
-
-@keyframes cardAppear {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .about-section {
     padding: 40px 20px;
     margin: 40px auto;
     max-width: 1000px;
-}
-
-.about-card {
-    background: white;
-    border: 2px solid #ff6f61;
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    animation: fadeIn 1s ease-out;
-    position: relative;
-    overflow: hidden;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.about-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('wooden-educational-toys-wooden-shape-color-sorting-preschool-stacking-blocks-the-stationers-1.webp');
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.3);
-    z-index: 1;
-}
-
-.about-card h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    background: linear-gradient(45deg, #fff, #4CAF50);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 2;
 }
 
 .about-content {
@@ -295,99 +200,6 @@ body {
     position: relative;
     z-index: 2;
     padding: 20px;
-}
-
-.about-content p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: white;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-}
-
-.about-section .buy-button {
-    background: #ff6f61;
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    font-size: 1.2rem;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 30px;
-    justify-content: center;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
-    position: relative;
-    z-index: 2;
-    font-weight: bold;
-    animation: pulse 2s infinite;
-}
-
-.about-section .buy-button:hover {
-    animation: none;
-    transform: translateY(-3px) scale(1.1);
-    background: #e65c54;
-    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.6);
-}
-
-.about-section .buy-button:active {
-    transform: translateY(1px);
-}
-
-.about-section .buy-button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    background: linear-gradient(45deg, #4CAF50, #45a049);
-    opacity: 0;
-    z-index: -1;
-    transition: all 0.3s ease;
-}
-
-.about-section .buy-button:hover::after {
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 8px 25px rgba(76, 175, 80, 0.5);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
-    }
-}
-
-@keyframes shimmer {
-    0% {
-        background-position: -100% 0;
-    }
-    100% {
-        background-position: 100% 0;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -413,42 +225,6 @@ body {
     display: none;
 }
 
-.about-section .buy-button span {
-    background: linear-gradient(90deg, #fff, #4CAF50, #fff);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 3s infinite;
-}
-
-.features-list,
-.benefits-list {
-    list-style: none;
-    margin: 15px 0;
-    color: white;
-    text-align: left;
-    padding-left: 20px;
-    position: relative;
-    z-index: 2;
-}
-
-.features-list li,
-.benefits-list li {
-    margin: 10px 0;
-    padding-left: 25px;
-    position: relative;
-    font-size: 1.1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-}
-
-.features-list li::before,
-.benefits-list li::before {
-    content: '✦';
-    position: absolute;
-    left: 0;
-    color: #4CAF50;
-}
 .social-link {
     display: flex;
     align-items: center;
@@ -670,7 +446,7 @@ body {
     padding: 50px;
     justify-content: space-between;
     background-color: #ff6f61;
-    color: white;
+    color: black;
 }
 .footer-links ul {
     list-style-type: none;
@@ -780,7 +556,7 @@ body {
     }
 
     .text h1 {
-        font-size: 20px;
+        font-size: 35px;
     }
 
     .first-card {
@@ -850,7 +626,7 @@ body {
     }
 
     .text h1 {
-        font-size: 18px;
+        font-size: 35px;
     }
 
     .chi-img {
